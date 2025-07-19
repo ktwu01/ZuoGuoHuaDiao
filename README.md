@@ -2,11 +2,11 @@
 
 An interesting web application that helps you calculate whether your summer vacation was worth it!
 
-![screenshot](assets/screenshot-summer-calculator.png)
+![screenshot](assets/Screenshot-LifeZuoGuoHuaDiao.png)
 
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fktwu01.github.io%2Fsummer-calculator%2F)](https://ktwu01.github.io/summer-calculator/) [![GitHub stars](https://img.shields.io/github/stars/ktwu01/summer-calculator)](https://github.com/ktwu01/summer-calculator) [![GitHub forks](https://img.shields.io/github/forks/ktwu01/summer-calculator)](https://github.com/ktwu01/summer-calculator/fork) ![License](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fktwu01.github.io%2FZuoGuoHuaDiao%2F)](https://ktwu01.github.io/ZuoGuoHuaDiao/) [![GitHub stars](https://img.shields.io/github/stars/ktwu01/ZuoGuoHuaDiao)](https://github.com/ktwu01/ZuoGuoHuaDiao) [![GitHub forks](https://img.shields.io/github/forks/ktwu01/ZuoGuoHuaDiao)](https://github.com/ktwu01/ZuoGuoHuaDiao/fork) ![License](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)
 
-[![Build Status](https://img.shields.io/travis/com/ktwu01/summer-calculator.svg)](https://travis-ci.com/ktwu01/summer-calculator) [![Coverage Status](https://coveralls.io/repos/github/ktwu01/summer-calculator/badge.svg?branch=main)](https://coveralls.io/github/ktwu01/summer-calculator?branch=main) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![Build Status](https://img.shields.io/travis/com/ktwu01/ZuoGuoHuaDiao.svg)](https://travis-ci.com/ktwu01/ZuoGuoHuaDiao) [![Coverage Status](https://coveralls.io/repos/github/ktwu01/ZuoGuoHuaDiao/badge.svg?branch=main)](https://coveralls.io/github/ktwu01/ZuoGuoHuaDiao?branch=main) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/ktwu01?style=social)](https://twitter.com/ktwu01)
 

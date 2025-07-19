@@ -518,7 +518,7 @@ const Index = () => {
             </WeiboShareButton>
           </div>
           <div className="mt-4 flex justify-center gap-2">
-            <Button onClick={handleScreenshot} variant="outline">手动截图</Button>
+            <Button onClick={handleScreenshot} variant="outline">点击截屏</Button>
             <Button onClick={copyUrlToClipboard} variant="outline">复制链接</Button>
             <Button onClick={bookmarkPage} variant="outline">收藏页面</Button>
           </div>
