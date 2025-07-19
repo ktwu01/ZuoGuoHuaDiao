@@ -229,6 +229,7 @@ const Index = () => {
       spentAll: false, // 花光存款
     })
   );
+  const [score, setScore] = useState(0);
 
   // 保存状态到localStorage
   useEffect(() => {
@@ -237,6 +238,10 @@ const Index = () => {
     saveToLocalStorage('activities', activities);
     saveToLocalStorage('achievements', achievements);
   }, [lifeStart, lifeEnd, activities, achievements]);
+
+  useEffect(() => {
+    setScore(calculateLifeValue());
+  }, [achievements, activities]);
 
   useEffect(() => {
     setShareUrl(window.location.href);
@@ -484,13 +489,13 @@ const Index = () => {
         </CardHeader>
         <CardContent>
           <p className="text-5xl font-extrabold text-center text-blue-600 mb-4">
-            {calculateLifeValue()}
+            {score}
           </p>
           <p className="text-xl text-center text-gray-700 mb-4">
-            {getScoreComment(calculateLifeValue())}
+            {getScoreComment(score)}
           </p>
           <p className="text-md text-center text-gray-500">
-            {getNextMilestone(calculateLifeValue())}
+            {getNextMilestone(score)}
           </p>
         </CardContent>
       </Card>
