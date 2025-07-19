@@ -125,7 +125,7 @@ const Index = () => {
     
     currentScore += activities.length * 10;
     
-    return Math.min(Math.round(currentScore), 120);
+    return Math.round(currentScore);
   };
 
   useEffect(() => {
