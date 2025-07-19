@@ -3,7 +3,7 @@ import Index from "./pages/Index.jsx";
 
 export const navItems = [
   {
-    title: "暑假值不值",
+    title: "人生值不值",
     to: "/",
     icon: <Sun className="h-4 w-4" />,
     page: <Index />,

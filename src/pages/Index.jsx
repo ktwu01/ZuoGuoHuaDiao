@@ -35,7 +35,7 @@ const Index = () => {
     }
   };
 
-  // 暑假时间配置
+  // 人生时间配置
   const [summerVacationStart, setSummerVacationStart] = useState(() => 
     new Date(loadFromLocalStorage('summerVacationStart', "2025-07-01"))
   );
@@ -264,13 +264,13 @@ const Index = () => {
   };
 
   const getScoreComment = (score) => {
-    if (score === 0) return "你的暑假太不值了，退学吧";
-    if (score < 29) return "你的暑假太不值了";
-    if (score >= 29 && score < 39) return "你的暑假要再加把劲了";
+    if (score === 0) return "你的人生太不值了，退学吧";
+    if (score < 29) return "你的人生太不值了";
+    if (score >= 29 && score < 39) return "你的人生要再加把劲了";
     if (score >= 39 && score < 49) return "勉强及格，但还是很废";
     if (score >= 49 && score < 59) return "还行吧，至少没完全浪费";
     if (score >= 59 && score < 69) return "不错不错，有点东西";
-    if (score >= 69 && score < 79) return "哇塞，你是暑假卷王吧";
+    if (score >= 69 && score < 79) return "哇塞，你是人生卷王吧";
     if (score >= 79 && score < 89) return "你怎么不上天呢？";
     if (score >= 89 && score < 99) return "神仙下凡辛苦了";
     return "你他娘的还真是个天才！";
@@ -317,7 +317,7 @@ const Index = () => {
 
   const countdownRenderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
-      return <span className="text-4xl font-bold">暑假已结束!</span>;
+      return <span className="text-4xl font-bold">人生已结束!</span>;
     }
     return (
       <div className="flex flex-col items-center">
@@ -325,7 +325,7 @@ const Index = () => {
           {days}天 {hours}时 {minutes}分 {seconds}秒
         </div>
         <div className="mt-4 text-xl">
-          距离暑假结束还有
+          距离人生结束还有
         </div>
       </div>
     );
@@ -577,7 +577,7 @@ const Index = () => {
       <div className="max-w-4xl mx-auto">
         {/* 导航栏 */}
         <div className="flex justify-center items-center mb-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-blue-800">这b暑假放的值不值</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-blue-800">这b人生过的值不值</h1>
           {/* 删除按钮部分 */}
         </div>
 
@@ -586,7 +586,7 @@ const Index = () => {
           <CardHeader>
             <CardTitle className="text-2xl font-bold flex items-center gap-2">
               <Clock className="h-6 w-6" />
-              <span>暑假倒计时</span>
+              <span>人生倒计时</span>
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -599,19 +599,19 @@ const Index = () => {
           </CardContent>
         </Card>
 
-        {/* 暑假价值评估 */}
+        {/* 人生价值评估 */}
         <Card className="mb-8">
           <CardHeader>
-            {/* <CardTitle className="text-2xl font-bold">这b暑假放的值不值?</CardTitle> */}
+            {/* <CardTitle className="text-2xl font-bold">这b人生过的值不值?</CardTitle> */}
           </CardHeader>
           <CardContent>
             <div className="space-y-6">
-              {/* 暑假日期设置 */}
+              {/* 人生日期设置 */}
               <div>
-                <h3 className="font-medium mb-2">暑假日期设置</h3>
+                <h3 className="font-medium mb-2">人生日期设置</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium mb-1">暑假开始日期</label>
+                    <label className="block text-sm font-medium mb-1">人生开始日期</label>
                     <input
                       type="date"
                       value={summerVacationStart.toISOString().split('T')[0]}
@@ -620,7 +620,7 @@ const Index = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-1">暑假结束日期</label>
+                    <label className="block text-sm font-medium mb-1">人生结束日期</label>
                     <input
                       type="date"
                       value={summerVacationEnd.toISOString().split('T')[0]}
@@ -635,7 +635,7 @@ const Index = () => {
               <div>
                 <h3 className="font-medium mb-2 flex items-center gap-2">
                   <BookOpen className="h-5 w-5" />
-                  <span>暑假作业</span>
+                  <span>人生作业</span>
                 </h3>
                 <div className="flex items-center gap-4">
                   <label className="flex items-center gap-2">
@@ -645,7 +645,7 @@ const Index = () => {
                       onChange={(e) => setHasHomework(e.target.checked)}
                       className="h-4 w-4"
                     />
-                    有暑假作业
+                    有人生作业
                   </label>
                   {hasHomework && (
                     <div className="flex-1">
@@ -666,11 +666,11 @@ const Index = () => {
                 </div>
               </div>
 
-              {/* 暑假成就 */}
+              {/* 人生成就 */}
               <div>
                 <h3 className="font-medium mb-2 flex items-center gap-2">
                   <Trophy className="h-5 w-5" />
-                  <span>暑假成就</span>
+                  <span>人生成就</span>
                 </h3>
                 {/* 大成就 */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-3">
@@ -751,13 +751,13 @@ const Index = () => {
                 {renderAchievementsList()}
               </div>
 
-              {/* 暑假活动 */}
+              {/* 人生活动 */}
               <div>
-                <h3 className="font-medium mb-2">暑假活动</h3>
+                <h3 className="font-medium mb-2">人生活动</h3>
                 <div className="flex gap-2 mb-4">
                   <input
                     type="text"
-                    placeholder="添加你的暑假活动 (如: 旅行、绕地球一圈、中彩票、交到新朋友等)"
+                    placeholder="添加你的人生活动 (如: 旅行、绕地球一圈、中彩票、交到新朋友等)"
                     value={newActivity}
                     onChange={(e) => setNewActivity(e.target.value)}
                     className="flex-1 px-3 py-2 border rounded-md shadow-sm"
@@ -783,7 +783,7 @@ const Index = () => {
               {/* 评估结果 */}
               <div className="pt-4 border-t">
                 <h3 className="text-xl font-bold mb-4 text-center">
-                  你的暑假价值评分: {summerValue}
+                  你的人生价值评分: {summerValue}
                 </h3>
                 <div className="text-center text-lg font-medium mb-2">
                   {scoreComment}
@@ -822,15 +822,15 @@ const Index = () => {
               <Button className="bg-blue-500 hover:bg-blue-600 text-white">
                 1.截图 2.复制链接⬇ 3.发布 就可以分享到小红薯和朋友圈啦
               </Button>
-              <WeiboShareButton url={shareUrl} title={`我的暑假价值评分: ${summerValue} - ${scoreComment}`}>
+              <WeiboShareButton url={shareUrl} title={`我的人生价值评分: ${summerValue} - ${scoreComment}`}>
                 <Button variant="outline">分享到 微博</Button>
               </WeiboShareButton>
 
-              <FacebookShareButton url={shareUrl} quote={`我的暑假价值评分: ${summerValue} - ${scoreComment}`}>
+              <FacebookShareButton url={shareUrl} quote={`我的人生价值评分: ${summerValue} - ${scoreComment}`}>
                 <Button variant="outline">分享到 Facebook</Button>
               </FacebookShareButton>
               
-              <TwitterShareButton url={shareUrl} title={`我的暑假价值评分: ${summerValue} - ${scoreComment}`}>
+              <TwitterShareButton url={shareUrl} title={`我的人生价值评分: ${summerValue} - ${scoreComment}`}>
                 <Button variant="outline">分享到 Twitter/X</Button>
               </TwitterShareButton>
 
@@ -868,7 +868,7 @@ const Index = () => {
           )}
 
           <footer className="text-center text-gray-500 text-sm mt-8 pb-4">
-            <p>© 2025 这b暑假放的值不值？  
+            <p>© 2025 这b人生过的值不值？  
               <Link2 className="h-4 w-4 inline-block mr-1" />
               <a
                 href="https://github.com/ktwu01/summer-calculator"
