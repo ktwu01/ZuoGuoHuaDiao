@@ -349,7 +349,7 @@ const Index = () => {
     setTimeout(() => setShowCopyNotification(false), 2000);
   };
   const bookmarkPage = () => {
-    alert('请按 ' + (navigator.userAgent.toLowerCase().indexOf('mac') != -1 ? 'Command/Cmd' : 'CTRL') + ' + D 收藏本页面。');
+    alert('请按 ' + (navigator.userAgent.toLowerCase().indexOf('mac') != -1 ? 'Ctrl/Cmd' : 'CTRL') + ' + D 收藏本页面。');
   };
 
   return (
@@ -357,11 +357,11 @@ const Index = () => {
       <header className="text-center my-8">
         <h1 className="text-4xl font-extrabold tracking-tight text-gray-900">
           这b人生过的值不值
-          <span className="block text-2xl text-gray-500 font-normal tracking-normal mt-2">（做过划掉）</span>
+          <span className="block text-2xl text-gray-500 font-normal tracking-normal mt-2">（做过划掉，算算这辈子到底值不值！）</span>
         </h1>
-        <p className="mt-4 text-lg text-gray-600">
+        {/* <p className="mt-4 text-lg text-gray-600">
           看看你的人生清单，算算这辈子到底值不值！
-        </p>
+        </p> */}
       </header>
 
       <Card className="mb-6 bg-white shadow-lg border-gray-200">
@@ -499,6 +499,7 @@ const Index = () => {
             </WeiboShareButton>
           </div>
           <div className="mt-4 flex justify-center gap-2">
+            <Button onClick={copyUrlToClipboard} variant="outline">手动截图</Button>
             <Button onClick={copyUrlToClipboard} variant="outline">复制链接</Button>
             <Button onClick={bookmarkPage} variant="outline">收藏页面</Button>
           </div>
@@ -512,14 +513,31 @@ const Index = () => {
       )}
 
       <footer className="text-center mt-8 text-sm text-gray-500">
-        <p>
-          灵感来源：<a href="https://github.com/Holiday-Calculator/holiday-calculator" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">假期价值计算器</a>
-        </p>
+            <p className="mt-2">
+              <Link2 className="h-4 w-4 inline-block mr-1" />
+              <a
+                href="https://github.com/ktwu01/summer-calculator"
+                className="text-blue-600 hover:text-blue-800"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                觉得好用？给这项目点个⭐Star吧！
+              </a>
+              灵感来源：
+              <a
+                href="https://worthjob.zippland.com/"
+                className="text-blue-600 hover:text-blue-800"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                "这b班上的值不值测算版"
+              </a>
+            </p>
         <p className="mt-2">
           人生苦短，及时行乐。做你想做的事，才是最有价值的。
         </p>
         <p className="mt-2">
-          &copy; {new Date().getFullYear()} ZuoGuoHuaDiao. All Rights Reserved.
+          &copy; {new Date().getFullYear()} 做过划掉（这b人生过的值不值）
         </p>
       </footer>
     </div>
