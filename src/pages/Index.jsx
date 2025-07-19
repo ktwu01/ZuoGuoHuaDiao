@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Share2, Clock, BookOpen, Sun, Trophy, Award, Gamepad2, Trophy as TrophyIcon, Smartphone, Cloud, Utensils, Heart, Plane, GraduationCap, Briefcase, DollarSign, Music, Film, Dumbbell, Coffee, Moon, Wifi, ShoppingBag, Smile, Frown, Meh, ThumbsUp, ThumbsDown, Battery, Wrench, Bike, Car, Bus, Train, Ship, Anchor, Camera, Headphones, Book, PenTool, Mic, Phone, Mail, MessageSquare, User, Users, Home, Map, Navigation, Compass, Globe, Watch, Calendar, CreditCard, Key, Lock, Unlock, Gift, Bell, Star, Flag, Trash2, Download, Upload, Edit, Copy, Save, Plus, Minus, X, Check, ChevronRight, ChevronLeft, ChevronUp, ChevronDown, ArrowRight, ArrowLeft, ArrowUp, ArrowDown, RotateCw, RefreshCw, Power, Volume2, VolumeX, Sliders, Settings, HelpCircle, AlertCircle, Info, Lightbulb, Zap, Shield, Feather, Droplet, Wind, Thermometer, Umbrella, Leaf, Trees as Tree, Bug, Fish, Bird, Cat, Dog, PawPrint, Wine, Image, Wallet, Package, Eye, Paperclip, Link2, Bookmark } from 'lucide-react'
@@ -13,8 +13,10 @@ import {
 } from "react-share";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { toPng } from 'html-to-image';
 
 const Index = () => {
+  const printRef = useRef(null);
   // 从本地存储加载数据
   const loadFromLocalStorage = (key, defaultValue) => {
     const saved = localStorage.getItem(key);
@@ -305,6 +307,23 @@ const Index = () => {
     return Math.min(score, 120);
   };
 
+  const handleScreenshot = async () => {
+    if (!printRef.current) return;
+    try {
+      const dataUrl = await toPng(printRef.current, { 
+        cacheBust: true,
+        backgroundColor: '#f9fafb', // same as bg-gray-50
+      });
+      const link = document.createElement('a');
+      link.download = 'my-life-in-review.png';
+      link.href = dataUrl;
+      link.click();
+    } catch (err) {
+      console.error(err);
+      alert('抱歉，截图失败了。');
+    }
+  };
+
   const countdownRenderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
       return <span>人生已结束，开始新的轮回吧！</span>;
@@ -353,7 +372,7 @@ const Index = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 bg-gray-50 text-gray-800 font-sans-serif selection:bg-blue-200">
+    <div className="container mx-auto p-4 bg-gray-50 text-gray-800 font-sans-serif selection:bg-blue-200" ref={printRef}>
       <header className="text-center my-8">
         <h1 className="text-4xl font-extrabold tracking-tight text-gray-900">
           这b人生过的值不值
@@ -499,7 +518,7 @@ const Index = () => {
             </WeiboShareButton>
           </div>
           <div className="mt-4 flex justify-center gap-2">
-            <Button onClick={copyUrlToClipboard} variant="outline">手动截图</Button>
+            <Button onClick={handleScreenshot} variant="outline">手动截图</Button>
             <Button onClick={copyUrlToClipboard} variant="outline">复制链接</Button>
             <Button onClick={bookmarkPage} variant="outline">收藏页面</Button>
           </div>
@@ -516,7 +535,7 @@ const Index = () => {
             <p className="mt-2">
               <Link2 className="h-4 w-4 inline-block mr-1" />
               <a
-                href="https://github.com/ktwu01/summer-calculator"
+                href="https://github.com/ktwu01/ZuoGuoHuaDiao"
                 className="text-blue-600 hover:text-blue-800"
                 target="_blank"
                 rel="noopener noreferrer"
