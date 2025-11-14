@@ -13,10 +13,11 @@ const CHAT_VARIABLE = process.env.CHAT_VARIABLE || '';
 const PUBLIC_PATH = process.env.PUBLIC_PATH || '';
 
 const isProdEnv = process.env.NODE_ENV === 'production';
+// Use /ZuoGuoHuaDiao/ as base path for GitHub Pages deployment
 const publicPath = (isProdEnv && CHAT_VARIABLE)
   ? PUBLIC_PATH + '/' + CHAT_VARIABLE
-  : PUBLIC_PATH + '/';
-const outDir = (isProdEnv && CHAT_VARIABLE) ? 'build/' + CHAT_VARIABLE : 'build';
+  : (isProdEnv ? '/ZuoGuoHuaDiao/' : PUBLIC_PATH + '/');
+const outDir = (isProdEnv && CHAT_VARIABLE) ? 'build/' + CHAT_VARIABLE : (isProdEnv ? 'dist' : 'build');
 const plugins = isProdEnv
   ? CHAT_VARIABLE
     ? [react(), prodHtmlTransformer(CHAT_VARIABLE)]
