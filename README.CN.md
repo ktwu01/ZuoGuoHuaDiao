@@ -1,8 +1,8 @@
-# 这b人生过的值不值 - 人生价值计算器 🎯
+# 这b人生过的值不值
 
-一个有趣的网页应用，帮助你计算人生过得值不值！
+做过划掉，算算这辈子到底值不值！
 
-![screenshot](assets/screenshot-LifeZuoGuoHuaDiao.png)
+![screenshot](./assets/Screenshot-LifeZuoGuoHuaDiao.png)
 
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fktwu01.github.io%2FZuoGuoHuaDiao%2F)](https://ktwu01.github.io/ZuoGuoHuaDiao/) [![GitHub stars](https://img.shields.io/github/stars/ktwu01/ZuoGuoHuaDiao)](https://github.com/ktwu01/ZuoGuoHuaDiao) [![GitHub forks](https://img.shields.io/github/forks/ktwu01/ZuoGuoHuaDiao)](https://github.com/ktwu01/ZuoGuoHuaDiao/fork) ![License](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)
 
