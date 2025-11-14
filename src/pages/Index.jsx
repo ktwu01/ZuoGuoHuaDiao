@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Share2, Clock, BookOpen, Sun, Trophy, Award, Gamepad2, Trophy as TrophyIcon, Smartphone, Cloud, Utensils, Heart, Plane, GraduationCap, Briefcase, DollarSign, Music, Film, Dumbbell, Coffee, Moon, Wifi, ShoppingBag, Smile, Frown, Meh, ThumbsUp, ThumbsDown, Battery, Wrench, Bike, Car, Bus, Train, Ship, Anchor, Camera, Headphones, Book, PenTool, Mic, Phone, Mail, MessageSquare, User, Users, Home, Map, Navigation, Compass, Globe, Watch, Calendar, CreditCard, Key, Lock, Unlock, Gift, Bell, Star, Flag, Trash2, Download, Upload, Edit, Copy, Save, Plus, Minus, X, Check, ChevronRight, ChevronLeft, ChevronUp, ChevronDown, ArrowRight, ArrowLeft, ArrowUp, ArrowDown, RotateCw, RefreshCw, Power, Volume2, VolumeX, Sliders, Settings, HelpCircle, AlertCircle, Info, Lightbulb, Zap, Shield, Feather, Droplet, Wind, Thermometer, Umbrella, Leaf, Trees as Tree, Bug, Fish, Bird, Cat, Dog, PawPrint, Wine, Image, Wallet, Package, Eye, Paperclip, Link2, Bookmark } from 'lucide-react'
+import { Share2, Clock, BookOpen, Sun, Trophy, Award, Gamepad2, Trophy as TrophyIcon, Smartphone, Cloud, Utensils, Heart, Plane, GraduationCap, Briefcase, DollarSign, Music, Film, Dumbbell, Coffee, Moon, Wifi, ShoppingBag, Smile, Frown, Meh, ThumbsUp, ThumbsDown, Battery, Wrench, Bike, Car, Bus, Train, Ship, Anchor, Camera, Headphones, Book, PenTool, Mic, Phone, Mail, MessageSquare, User, Users, Home, Map, Navigation, Compass, Globe, Watch, Calendar, CreditCard, Key, Lock, Unlock, Gift, Bell, Star, Flag, Trash2, Download, Upload, Edit, Copy, Save, Plus, Minus, X, Check, ChevronRight, ChevronLeft, ChevronUp, ChevronDown, ArrowRight, ArrowLeft, ArrowUp, ArrowDown, RotateCw, RefreshCw, Power, Volume2, VolumeX, Sliders, Settings, HelpCircle, AlertCircle, Info, Lightbulb, Zap, Shield, Feather, Droplet, Wind, Thermometer, Umbrella, Leaf, Trees as Tree, Bug, Fish, Bird, Cat, Dog, PawPrint, Wine, Image, Wallet, Package, Eye, Paperclip, Link2, Bookmark, Github, GitFork } from 'lucide-react'
 import Countdown from "react-countdown";
 import {
   FacebookShareButton,
@@ -207,7 +207,7 @@ const Index = () => {
       return (
         <div className="text-center">
           <div className="text-2xl font-bold">
-            {days}天 {hours}时 {minutes}分 {seconds}秒
+          你的人生还剩下 {days}天 {hours}时 {minutes}分 {seconds}秒
           </div>
         </div>
       );
@@ -362,6 +362,32 @@ const Index = () => {
           这b人生过的值不值
           <span className="block text-2xl text-gray-500 font-normal tracking-normal mt-2">（做过划掉，算算这辈子到底值不值！）</span>
         </h1>
+        <div className="flex justify-center items-center gap-4 mt-6">
+          <Button
+            variant="outline"
+            className="flex items-center gap-2"
+            onClick={() => window.open("https://github.com/ktwu01/ZuoGuoHuaDiao", "_blank")}
+          >
+            <Github className="h-4 w-4" />
+            GitHub
+          </Button>
+          <Button
+            variant="default"
+            className="flex items-center gap-2 bg-green-600 hover:bg-green-700"
+            onClick={() => window.open("https://github.com/ktwu01/ZuoGuoHuaDiao/fork", "_blank")}
+          >
+            <GitFork className="h-4 w-4" />
+            Fork
+          </Button>
+          <Button
+            variant="outline"
+            className="flex items-center gap-2"
+            onClick={() => window.open("https://github.com/ktwu01/ZuoGuoHuaDiao", "_blank")}
+          >
+            <Star className="h-4 w-4" />
+            Star
+          </Button>
+        </div>
       </header>
 
       <Card className="mb-6 bg-white shadow-lg border-gray-200">
