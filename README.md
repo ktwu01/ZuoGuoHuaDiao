@@ -12,17 +12,17 @@ Calculate and evaluate your life's value through achievements, daily activities,
 
 [中文文档](./README.CN.md) | English
 
-## ✨ Features
+## Features
 
-- 📊 **Comprehensive Life Evaluation** - Multi-dimensional assessment of your life achievements
-- 🎯 **Achievement Tracking** - Track major and minor accomplishments
-- 📅 **Date-based Calculation** - Set your evaluation period (originally designed for summer vacation)
-- 🎨 **Beautiful UI** - Modern, responsive design built with React and Tailwind CSS
-- 💾 **Local Storage** - Your data is saved automatically in your browser
-- 🎉 **Shareable Results** - Share your life value score with friends
-- 🌐 **Live Demo** - Try it now at [ktwu01.github.io/ZuoGuoHuaDiao](https://ktwu01.github.io/ZuoGuoHuaDiao/)
+- **Comprehensive Life Evaluation** - Multi-dimensional assessment of your life achievements
+- **Achievement Tracking** - Track major and minor accomplishments
+- **Date-based Calculation** - Set your evaluation period (originally designed for summer vacation)
+- **Beautiful UI** - Modern, responsive design built with React and Tailwind CSS
+- **Local Storage** - Your data is saved automatically in your browser
+- **Shareable Results** - Share your life value score with friends
+- **Live Demo** - Try it now at [ktwu01.github.io/ZuoGuoHuaDiao](https://ktwu01.github.io/ZuoGuoHuaDiao/)
 
-## 🎮 How to Use
+## How to Use
 
 1. Set your summer vacation start and end dates
 2. Check off the achievements you've completed
@@ -30,7 +30,7 @@ Calculate and evaluate your life's value through achievements, daily activities,
 4. View your summer vacation value score and evaluation
 5. Share with your friends to play together
 
-## 💯 Scoring Rules
+## Scoring Rules
 
 ### Base Score (up to 29 points)
 - Have summer homework: calculated based on completion (0-29 points)
@@ -58,7 +58,7 @@ Get 3 points for each small daily task completed, including:
 ### Custom Activities (10 points each)
 - You can add your own summer activities, each adding 10 points
 
-## 🏆 Scoring Standard
+## Scoring Standard
 
 - 0 points: Suggest dropping out
 - 1-28 points: Summer vacation was not worth it
@@ -73,7 +73,7 @@ Get 3 points for each small daily task completed, including:
 
 Remember: Every little thing in life is important. Don't think that things like watching TikTok or zoning out are meaningless. Summer vacation is for relaxing and enjoying yourself. Doing what you love is what's most worthwhile!
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **React 18** - Modern UI library
 - **Vite** - Lightning-fast build tool
@@ -82,7 +82,7 @@ Remember: Every little thing in life is important. Don't think that things like 
 - **React Router** - Client-side routing with HashRouter
 - **Lucide React** - Icon library
 
-## 🚀 Development
+## Development
 
 ### Prerequisites
 - Node.js 20 or higher
@@ -120,7 +120,7 @@ npm run build
 
 Then visit: http://localhost:9999/ZuoGuoHuaDiao/
 
-## 📦 Deployment
+## Deployment
 
 This project is configured for automatic deployment to GitHub Pages:
 
@@ -131,11 +131,11 @@ This project is configured for automatic deployment to GitHub Pages:
 
 For detailed deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md)
 
-## 📄 License
+## License
 
 This project is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0).
 
-## 🤝 Contributing
+## Contributing
 
 Contributions, issues, and feature requests are welcome!
 

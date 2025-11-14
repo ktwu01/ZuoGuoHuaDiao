@@ -1,6 +1,6 @@
 # 环境安装指南
 ## NVM 安装
-``` 
+```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 ```
 ## Node.js 16 安装
