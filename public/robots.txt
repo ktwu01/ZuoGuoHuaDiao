@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://github.com/ktwu01/summer-calculator/sitemap.xml
+Sitemap: https://github.com/ktwu01/ZuoGuoHuaDiao/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 10 
